@@ -20,9 +20,7 @@ int main() {
 	while (UPPER_BOUND--){
 		
 		cin >> MAX_CUTS;
-        assert (MAX_CUTS >= 1);
-        assert (MAX_CUTS <= pow(10,7));
-		
+        	assert (MAX_CUTS >= 1 && MAX_CUTS <= pow(10,7));
 		cout << (MAX_CUTS*MAX_CUTS/4) << endl;
 
 	}
