@@ -46,38 +46,9 @@ class FiveNums {
 
 int main (){
 
-	//Input the string into a vector
-	vector <int> arr;
-	ifstream numbersFile ("numbers.txt");
-	string input;
 	
-	while (numbersFile >> input){
-		for (int i = 0 ; i < input.length(); i++){
-			arr.push_back (input.at (i) - 48);
-		}
-	}
-
-	vector < int > starting_five;
-	starting_five.push_back (arr.at(0));
-	starting_five.push_back (arr.at(1));
-	starting_five.push_back (arr.at(2));
-	starting_five.push_back (arr.at(3));
-	starting_five.push_back (arr.at(4));
-
-	FiveNums *my_nums = new FiveNums(starting_five);
-
-	//Finding solution
-	int max = my_nums->getProd();
-
-	for (int i = 5; i < arr.size(); i++){
-		my_nums->addNum ( arr.at (i) );
-		int temp = my_nums->getProd();
-		if (temp > max){
-			max = temp;
-		}
-	}
-
-	cout << "MAX:" << max << endl;
 
 	return 0;
 }
+
+
