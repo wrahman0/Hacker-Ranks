@@ -9,8 +9,9 @@ bool isUnique (int year){
 
 	int x = year, digitsInYear = 0;
 
-	while (x/=10){
+	while (x){
 		digitsInYear++;
+		x/=10;
 	}
 
 	for (int i = 0; i < digitsInYear; i++){
@@ -35,7 +36,5 @@ int main (){
 
 	}
 	cout << user <<endl;
-	
-
 	return 0;
 }
