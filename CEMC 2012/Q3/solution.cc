@@ -2,6 +2,19 @@
 
 using namespace std;
 
+void outcomeFound (int &outcomes[6][3], int teamA, int teamB){
+
+	if (teamA == 1){
+		if (teamB == 2){
+			outcomes[0,0] = true;
+		}else if (teamB == 3){
+			outcomes[1,0] = true;
+		}else if (teamB == 4){
+			outcomes[2,0] = true;
+		}
+	}
+}
+
 
 int main (){
 
@@ -28,21 +41,22 @@ int main (){
 	cin >> played_games;
 
 	for (int i = 0; i < played_games; i++){
+		
 		for (int j = 0; j < 4; j++){
 			cin >> indiv_match[i];
 		}
 		
-		//win
-		if (indiv_match[2] > indiv_match[3]){
+		//flag outcomes
+		outcomeFound (outcomes, indiv_match[0]-1, indiv_match[1]-1);			
+					
+		if (indiv_match[2] > indiv_match[3]){ //win
 			
 			//First Team wins
 			teams[indiv_match[0] - 1][0] ++;
-
 			//Second Team loses
-			teams[indiv_match[1] - 1][1] ++;			
-			
+			teams[indiv_match[1] - 1][1] ++;
 
-		}else if(indiv_match[2] < indiv_match[3]){
+		}else if(indiv_match[2] < indiv_match[3]){ //lose
 			
 			//First Team loses
 			teams[indiv_match[0] - 1][1] ++;
@@ -50,13 +64,14 @@ int main (){
 			//Second Team wins
 			teams[indiv_match[1] - 1][0] ++;
 
-		}else if (indiv_match[2] == indiv_match[3]){
+		}else if (indiv_match[2] == indiv_match[3]){ //tie
 
 			//Both tie
 			teams[indiv_match[0] - 1][2]++;
 			teams[indiv_match[1] - 1][2]++;
 
 		}
+
 	}
 
 	return 0;
