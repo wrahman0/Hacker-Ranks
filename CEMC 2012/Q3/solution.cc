@@ -2,15 +2,15 @@
 
 using namespace std;
 
-void outcomeFound (int &outcomes[6][3], int teamA, int teamB){
+void outcomeFound (int outcomes[6][3], int teamA, int teamB){
 
 	if (teamA == 1){
 		if (teamB == 2){
-			outcomes[0,0] = true;
+			outcomes[0][0] = true;
 		}else if (teamB == 3){
-			outcomes[1,0] = true;
+			outcomes[1][0] = true;
 		}else if (teamB == 4){
-			outcomes[2,0] = true;
+			outcomes[2][0] = true;
 		}
 	}
 }
@@ -34,7 +34,7 @@ int main (){
 		{0,2,3},
 		{0,2,4},
 		{0,3,4},
-	}
+	};
 
 	cin >> curr_team;
 	curr_team--;
@@ -71,7 +71,6 @@ int main (){
 			teams[indiv_match[1] - 1][2]++;
 
 		}
-
 	}
 
 	return 0;
