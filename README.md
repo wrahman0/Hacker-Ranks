@@ -21,3 +21,11 @@ Project Euler
 | Summation of primes                   | http://tiny.cc/kbi2bx  | http://tiny.cc/7qh2bx |
 | Highly divisible triangular number    | http://tiny.cc/5bi2bx  | http://tiny.cc/srh2bx |
 | Longest Collatz sequence              | http://tiny.cc/mci2bx  | http://tiny.cc/7th2bx |
+
+CEMC
+=============
+| Problem Name  | Solution Link   | Question Link |
+| :------------------------------------ |:----------------------:| ---------------------:|
+| CEMC 2013 Q1                  | http://tiny.cc/g90dgx  | http://tiny.cc/t80dgx |
+| CEMC 2013 Q2                 | http://tiny.cc/7b1dgx  | http://tiny.cc/t80dgx |
+| CEMC 2013 Q3                 | http://tiny.cc/sc1dgx  | http://tiny.cc/t80dgx |
