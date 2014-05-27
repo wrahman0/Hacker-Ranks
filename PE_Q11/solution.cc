@@ -32,6 +32,14 @@ int main (){
 	int maxProd = -1;
 	int tempProd = -1;	
 
+	//Get the grid
+	for (int i = 0; i < 20; i++){
+		for (int j = 0; j < 20; j++){
+			cin >> grid[i][j];
+		}
+	}
+
+
 	for (int i = 0; i < 20; i++){
 
 		for (int j = 0; j < 20; j++){
