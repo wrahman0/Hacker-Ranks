@@ -7,11 +7,6 @@ using namespace std;
 
 int possibleRoutes (int curr_x, int curr_y, int end_x, int end_y){
 
-	cout << " curr_x: " << curr_x
-	<< " curr_y: " << curr_y
-	<< " end_x: " << end_x
-	<< " end_y: " << end_y << endl;
-
 	if (curr_x == end_x && curr_y == end_y){
 		return 1;
 	}else {
@@ -30,6 +25,6 @@ int possibleRoutes (int curr_x, int curr_y, int end_x, int end_y){
 
 int main (){
 
-	cout << possibleRoutes (0,0,3,3) << endl;
+	cout << possibleRoutes (0,0,20,20) << endl;
 	return 0;
 }
