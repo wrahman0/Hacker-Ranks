@@ -1,13 +1,10 @@
 #include <iostream>
-
-
 using namespace std;
 
 
 //Grid starts at [0,0] which is the top left corner
 //Moving right is [+1, y]
 //Moving down is [x, +1]
-
 bool *isClear (int x, int y){
 
 	bool *clear = new bool [2];
@@ -25,6 +22,7 @@ bool *isClear (int x, int y){
 	return clear;
 
 }
+
 
 int getMax (int grid[20][20], int i, int j){
 
@@ -55,6 +53,7 @@ int getMax (int grid[20][20], int i, int j){
 
 }
 
+
 int main (){
 
 	int grid[20][20];
@@ -69,7 +68,7 @@ int main (){
 	}
 
 	for (int i = 0; i < 17; i++){
-
+		
 		for (int j = 0; j < 17; j++){
 			
 			tempProd = getMax (grid, i, j);
@@ -80,7 +79,9 @@ int main (){
 			cout << "Max at (" << i << ", " << j << ") is " << getMax (grid,i,j) << endl;
 			
 		}
+
 	}
+
 	cout << maxProd << endl;
 
 	return 0;
