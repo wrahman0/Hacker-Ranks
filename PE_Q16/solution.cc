@@ -1,16 +1,48 @@
 #include <iostream>
+#include <string>
+#include <vector>
+
 
 using namespace std;
 
-int addDigitsWithCarry (int [] digitsToAdd){
+string prepend (string master, string slave){
+
+    return slave + master;
+
+}
+
+string addDigitsWithCarry (vector<int> digitsToAdd){
+
+    int carry = 0, sum = 0;
+    string answer = "";
+
+    for (int i = 0; i < digitsToAdd.size()  - 1; i++){
+
+        if (digitsToAdd[i] + digitsToAdd[i+1] > 10){
+
+            sum = digitsToAdd[i] + digitsToAdd[i+1] - 10;
+            carry = 10 * i;
+
+        }else{
+
+            sum = digitsToAdd[i] + digitsToAdd[i+1];
+
+        }
+
+        answer = prepend (answer, to_string (sum));
+
+    }
 
 
-    
-    return
+    return answer;
 }
 
 int main (){
 
-
+    vector <int> digits;
+    digits.push_back (9);
+    digits.push_back (9);
+    digits.push_back (9);
+    cout << addDigitsWithCarry (digits) << endl;
     return 0;
 }
