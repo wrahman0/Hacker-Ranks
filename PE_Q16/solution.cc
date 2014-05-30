@@ -11,38 +11,38 @@ string prepend (string master, string slave){
 
 }
 
+//Takes in an array of ints (one digit) and returns the sum. Does not care about the size of the int
 string addDigitsWithCarry (vector<int> digitsToAdd){
 
     int carry = 0, sum = 0;
     string answer = "";
 
-    for (int i = 0; i < digitsToAdd.size()  - 1; i++){
+    for (int i = 0; i < digitsToAdd.size(); i++){
 
-        if (carry + digitsToAdd[i] + digitsToAdd[i+1] > (10 * i)){
+        cout << "Adding " << digitsToAdd.at(i) << endl;
 
-            sum = digitsToAdd[i] + digitsToAdd[i+1] + carry - (10 * i);
-            carry = 10 * i;
+        if ( sum + digitsToAdd.at(i) >= 10) {
+
+            sum += digitsToAdd.at(i) - 10;
+            carry += 10;
 
         }else{
 
-            sum = digitsToAdd[i] + digitsToAdd[i+1];
+            sum += digitsToAdd.at(i);
 
         }
 
-        answer = prepend (answer, to_string (sum));
+        cout << "Carry is " << carry << "\nSum is " << sum << endl;
 
     }
 
-
+    answer = prepend (to_string(sum) , to_string (carry/10));
     return answer;
 }
 
 int main (){
 
     vector <int> digits;
-    digits.push_back (9);
-    digits.push_back (9);
-    digits.push_back (9);
     cout << addDigitsWithCarry (digits) << endl;
     return 0;
 }
