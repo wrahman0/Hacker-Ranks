@@ -18,9 +18,9 @@ string addDigitsWithCarry (vector<int> digitsToAdd){
 
     for (int i = 0; i < digitsToAdd.size()  - 1; i++){
 
-        if (digitsToAdd[i] + digitsToAdd[i+1] > 10){
+        if (carry + digitsToAdd[i] + digitsToAdd[i+1] > (10 * i)){
 
-            sum = digitsToAdd[i] + digitsToAdd[i+1] - 10;
+            sum = digitsToAdd[i] + digitsToAdd[i+1] + carry - (10 * i);
             carry = 10 * i;
 
         }else{
