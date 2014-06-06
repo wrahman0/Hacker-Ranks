@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <fstream>
+#include <sstream>
 
 using namespace std;
 
@@ -42,17 +44,17 @@ string addDigitsWithCarry (vector<int> digitsToAdd){
 
 int main () {
 
-	int INPUT;
-	vector <int> arrayOfNumbers;
+	vector <int> arr;
+    ifstream numbersFile ("input.txt");
+    string input;
+    
+    while (numbersFile >> input){
+        for (int i = 0 ; i < input.length(); i++){
+            arr.push_back (input.at (i) - 48);
+        }
+    }
 
-	while (INPUT << cin){
-		arrayOfNumbers.push_back (INPUT);
-	}
-
-	for (int i = 0; i < arrayOfNumbers.size(); i++){
-		cout << arrayOfNumbers.at(i) << endl;
-	}
-
+    cout << addDigitsWithCarry (arr) << endl;
 	return 0;
 }
 
