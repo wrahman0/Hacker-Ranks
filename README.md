@@ -21,6 +21,7 @@ Project Euler
 | Summation of primes                   | http://tiny.cc/kbi2bx  | http://tiny.cc/7qh2bx |
 | Highly divisible triangular number    | http://tiny.cc/5bi2bx  | http://tiny.cc/srh2bx |
 | Longest Collatz sequence              | http://tiny.cc/mci2bx  | http://tiny.cc/7th2bx |
+| Largest product in a series            | http://tiny.cc/iuy7gx  | http://tiny.cc/0uy7gx |
 
 CEMC
 =============
